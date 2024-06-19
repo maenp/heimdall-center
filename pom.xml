@@ -15,8 +15,8 @@
 	<name>heimdall-center</name>
 	<description>heimdall-center</description>
 	<modules>
-		<module>heimdall.center-core</module>
-		<module>heimdall.center-console</module>
+		<module>heimdall-center-core</module>
+		<module>heimdall-center-console</module>
 	</modules>
 	<properties>
 		<java.version>17</java.version>
