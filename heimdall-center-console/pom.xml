@@ -2,42 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- 继承本项目的父工程 -->
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.0</version>
+		<groupId>com.heimdall.center</groupId>
+		<artifactId>heimdall-center</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.heimdall.center</groupId>
-	<artifactId>heimdall-center</artifactId>
+	<artifactId>heimdall-center-console</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<!-- 父模块打包类型必须为pom -->
-    <packaging>pom</packaging>
-	<name>heimdall-center</name>
-	<description>heimdall-center</description>
+	<name>heimdall-center-console</name>
+	<description>heimdall-center-console</description>
+    <packaging>jar</packaging>
 
-	<!-- 模块说明：这里声明多个子模块 -->
-	<modules>
-		<module>heimdall-center-core</module>
-		<module>heimdall-center-console</module>
-	</modules>
 	<properties>
 		<java.version>17</java.version>
-		<fastjson.version>1.2.47</fastjson.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>${fastjson.version}</version>
-		</dependency>
-
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
 
