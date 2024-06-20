@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.0</version>
+		<version>3.1.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.heimdall.center</groupId>
@@ -24,7 +24,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<fastjson.version>1.2.47</fastjson.version>
-		<mybatis-plus.version>3.5.3</mybatis-plus.version>
+		<mybatis-plus.version>3.5.5</mybatis-plus.version>
 		<mysql-connector-java.version>8.0.16</mysql-connector-java.version>
 		<druid.version>1.2.10</druid.version>
 	</properties>

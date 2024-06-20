@@ -1,5 +1,5 @@
 server:
-  port: 9101
+  port: 9102
 spring:
   application:
     name: heimdall-center-console
@@ -12,21 +12,7 @@ spring:
       max-file-size: 20MB
       max-request-size: 20MB
   datasource:
-    url: jdbc:mysql://mysql4d5cd156a102.rds.ivolces.com:3306/activity_center_beta?useSSL=true&tinyInt1isBit=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai
-    username: activity_center_beta
-    password: activity_center_beta@2023@
-    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://82.156.161.245/center_0620
+    username: root
+    password: maMAm@123456root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    filters: stat
-    maxActive: 20
-    initialSize: 1
-    maxWait: 60000
-    minIdle: 1
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
