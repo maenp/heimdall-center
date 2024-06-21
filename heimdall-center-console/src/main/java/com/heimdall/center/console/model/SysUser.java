@@ -9,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
-@Data  // Lombok注解 它为类自动生成了getter、setter、toString、equals和hashCode方法，简化了代码。
+// Lombok注解 它为类自动生成了getter、setter、toString、equals和hashCode方法，简化了代码。
+@Data
 public class SysUser implements Serializable{
 
     // 定义了序列化ID，这个ID用于版本控制，确保序列化和反序列化的对象版本一致。
