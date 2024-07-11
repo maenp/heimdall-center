@@ -37,4 +37,10 @@ public interface UserService {
     */
     int deleteUser(Integer id);
 
+    /**
+     * 根据ID查询用户
+     * @param ID
+     * @return
+     */
+    SysUser getUserById(Integer id);
 }

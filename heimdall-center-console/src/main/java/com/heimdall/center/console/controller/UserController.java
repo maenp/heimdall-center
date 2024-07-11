@@ -87,4 +87,16 @@ public class UserController {
             return CommonUtil.errorJson(errorEnum);
         }
     }
+
+    @GetMapping("/getUserById")
+    public JSONObject getUserById(@RequestParam(value = "userid") Integer userid) {
+        try {
+            SysUser user = userService.getUserById(userid);
+            return CommonUtil.successJson(user);
+        } catch (RuntimeException e) {
+            ErrorEnum errorEnum = ErrorEnum.E_0;
+            errorEnum.setErrorMsg(e.getMessage());
+            return CommonUtil.errorJson(errorEnum);
+        }
+    }
 }

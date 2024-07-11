@@ -39,4 +39,9 @@ public class UserServiceImpl implements UserService {
     public int deleteUser(Integer id) {
         return userMapper.deleteById(id);
     }
+
+    @Override
+    public SysUser getUserById(Integer id) {
+        return userMapper.selectById(id);
+    }
 }
