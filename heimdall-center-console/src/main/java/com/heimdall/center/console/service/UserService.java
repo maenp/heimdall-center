@@ -29,4 +29,12 @@ public interface UserService {
      */
     Page<SysUser> getUserList(Integer page, Integer pageSize);
 
+    /**
+     * 删除用户
+     * @param id
+     * @return
+     * 
+    */
+    int deleteUser(Integer id);
+
 }

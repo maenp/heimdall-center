@@ -34,4 +34,9 @@ public class UserServiceImpl implements UserService {
         Page<SysUser> pageResult = userMapper.selectPage(p, null);
         return pageResult;
     }
+
+    @Override
+    public int deleteUser(Integer id) {
+        return userMapper.deleteById(id);
+    }
 }

@@ -74,4 +74,17 @@ public class UserController {
             return CommonUtil.errorJson(errorEnum);
         }
     }
+
+    @PostMapping("/deleteUser")
+    public JSONObject deleteUser(@RequestBody JSONObject requestJson) {
+        try {
+            CommonUtil.hasAllRequired(requestJson, "userid");
+            userService.deleteUser(requestJson.getInteger("userid"));
+            return CommonUtil.successJson();
+        } catch (RuntimeException e) {
+            ErrorEnum errorEnum = ErrorEnum.E_0;
+            errorEnum.setErrorMsg(e.getMessage());
+            return CommonUtil.errorJson(errorEnum);
+        }
+    }
 }
