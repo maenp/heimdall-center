@@ -1,8 +1,8 @@
 package com.heimdall.center.console.utils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.yiruike.activity.center.console.common.Constants;
-import com.yiruike.activity.center.console.common.ErrorEnum;
+import com.heimdall.center.console.common.Constants;
+import com.heimdall.center.console.common.ErrorEnum;
 
 public class CommonUtil {
     public static JSONObject successJson() {
@@ -29,5 +29,13 @@ public class CommonUtil {
         JSONObject resultJson = errorJson(errorEnum);
         resultJson.put("returnMsg", errorEnum.getErrorMsg() + " " + msg);
         return resultJson;
+    }
+
+    public static void hasAllRequired(JSONObject requestJson, String... requiredFields) {
+        for (String field : requiredFields) {
+            if (!requestJson.containsKey(field)) {
+                throw new RuntimeException("缺少必填参数" + field);
+            }
+        }
     }
 }

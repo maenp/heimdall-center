@@ -1,4 +1,4 @@
-package com.yiruike.activity.center.console.common;
+package com.heimdall.center.console.common;
 
 public class Constants {
 
